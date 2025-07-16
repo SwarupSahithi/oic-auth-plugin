@@ -5,11 +5,16 @@
 
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>4.64</version>
+    <relativePath/> <!-- use Jenkins plugin parent from remote -->
+  </parent>
+
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>oic-auth</artifactId>
   <version>1.9-SNAPSHOT</version>
-  <packaging>hpi</packaging>
-
   <name>OpenID Connect Authentication Plugin</name>
   <description>Jenkins plugin for OpenID Connect-based authentication.</description>
   <url>https://github.com/jenkinsci/oic-auth-plugin</url>
@@ -34,24 +39,6 @@
     <url>https://github.com/jenkinsci/oic-auth-plugin</url>
     <tag>HEAD</tag>
   </scm>
-
-  <!-- BOM for dependency versions -->
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.426.x</artifactId>
-        <version>1399.v003bc9cce4ca</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
-  <properties>
-    <java.level>8</java.level>
-    <jenkins.version>2.346.3</jenkins.version>
-  </properties>
 
   <dependencies>
     <!-- Logging -->
