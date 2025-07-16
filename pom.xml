@@ -52,6 +52,17 @@
   <artifactId>jbcrypt</artifactId>
   <version>0.4</version>
 </dependency>
+           <dependency>
+  <groupId>com.example</groupId>
+  <artifactId>some-library</artifactId>
+  <version>1.2.3</version>
+  <exclusions>
+    <exclusion>
+      <groupId>org.connectbot.jbcrypt</groupId>
+      <artifactId>jbcrypt</artifactId>
+    </exclusion>
+  </exclusions>
+</dependency>
 
   </dependencies>
 
