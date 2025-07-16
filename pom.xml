@@ -63,12 +63,11 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.jenkins-ci.tools</groupId>
-        <artifactId>maven-hpi-plugin</artifactId>
-        <version>3.45</version>
-        <extensions>true</extensions>
-      </plugin>
+<plugin>
+  <groupId>org.jenkins-ci.tools</groupId>
+  <artifactId>maven-hpi-plugin</artifactId>
+  <version>3.29</version> <!-- Compatible with Jenkins versions < 2.361 -->
+</plugin>
     </plugins>
   </build>
 
@@ -80,10 +79,11 @@
   </repositories>
 
   <pluginRepositories>
-    <pluginRepository>
-      <id>jenkins-releases</id>
-      <url>https://repo.jenkins-ci.org/releases/</url>
-    </pluginRepository>
-  </pluginRepositories>
+  <pluginRepository>
+    <id>jenkins-ci</id>
+    <url>https://repo.jenkins-ci.org/releases/</url>
+  </pluginRepository>
+</pluginRepositories>
+
 
 </project>
