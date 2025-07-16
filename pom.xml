@@ -9,11 +9,12 @@
     <version>3.48</version>
   </parent>
 
-  <groupId>org.jenkins-ci.plugins</groupId>
-  <artifactId>oic-auth</artifactId>
-  <version>1.9-SNAPSHOT</version>
-  <packaging>hpi</packaging>
-
+ <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>4.66</version>
+    <relativePath />
+         
+    
   <name>OpenId Connect Authentication Plugin</name>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Openid+Connect+Authentication+Plugin</url>
 
