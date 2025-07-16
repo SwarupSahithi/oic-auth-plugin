@@ -61,12 +61,12 @@
       <version>1.2</version>
     </dependency>
            <dependency>
-      <groupId>io.jenkins.tools.bom</groupId>
-      <artifactId>jenkins-bom</artifactId>
-      <version>2.361.1</version>
-      <type>pom</type>
-      <scope>import</scope>
-    </dependency>
+  <groupId>io.jenkins.tools.bom</groupId>
+  <artifactId>bom-2.426.x</artifactId>
+  <version>1442.vf970b_720b_153</version>
+  <type>pom</type>
+  <scope>import</scope>
+</dependency>
   </dependencies>
 
   <build>
@@ -78,11 +78,6 @@
     </extension>
   </extensions>
     <plugins>
-      <plugin>
-        <groupId>org.jenkins-ci.tools</groupId>
-        <artifactId>maven-hpi-plugin</artifactId>
-        <version>3.29</version> <!-- Use 3.29 if using Jenkins < 2.361 -->
-      </plugin>
         <plugin>
       <groupId>org.jenkins-ci.tools</groupId>
       <artifactId>maven-hpi-plugin</artifactId>
