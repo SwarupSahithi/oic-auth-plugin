@@ -124,6 +124,25 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>build-helper-maven-plugin</artifactId>
+  <version>3.2.0</version>
+  <executions>
+    <execution>
+      <id>create-meta-inf-annotations-dir</id>
+      <phase>generate-sources</phase>
+      <goals>
+        <goal>mkdir</goal>
+      </goals>
+      <configuration>
+        <directories>
+          <directory>${project.build.outputDirectory}/META-INF/annotations</directory>
+        </directories>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
     </plugins>
   </build>
 
