@@ -144,7 +144,9 @@
       </configuration>
     </execution>
   </executions>
-</plugin><plugin>
+</plugin>
+      
+<plugin>
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>exec-maven-plugin</artifactId>
   <version>3.1.0</version>
@@ -156,36 +158,16 @@
         <goal>exec</goal>
       </goals>
       <configuration>
-        <executable>bash</executable>
+        <executable>mkdir</executable>
         <arguments>
-          <argument>-c</argument>
-          <argument>mkdir -p "${project.build.outputDirectory}/META-INF/annotations"</argument>
+          <argument>-p</argument>
+          <argument>${project.build.outputDirectory}/META-INF/annotations</argument>
         </arguments>
       </configuration>
     </execution>
   </executions>
 </plugin>
-      <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>3.1.0</version>
-            <executions>
-                <execution>
-                    <id>create-annotations-dir</id>
-                    <phase>generate-sources</phase>
-                    <goals>
-                        <goal>exec</goal>
-                    </goals>
-                    <configuration>
-                        <executable>mkdir</executable>
-                        <arguments>
-                            <argument>-p</argument>
-                            <argument>${project.build.outputDirectory}/META-INF/annotations</argument>
-                        </arguments>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+
     </plugins>
   </build>
 
