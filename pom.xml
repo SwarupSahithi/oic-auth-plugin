@@ -4,21 +4,73 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>oic-auth</artifactId>
   <version>1.9-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
-  <parent>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-    <version>4.64</version>
-  </parent>
+  <name>OpenID Connect Authentication Plugin</name>
+  <description>Jenkins plugin for OpenID Connect-based authentication.</description>
+  <url>https://github.com/jenkinsci/oic-auth-plugin</url>
 
-  <properties>
-    <jenkins.version>2.346.3</jenkins.version>
-    <java.level>11</java.level>
-  </properties>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>sahithi</id>
+      <name>Sahithi Boddupally</name>
+    </developer>
+  </developers>
+
+  <!-- Jenkins Plugin BOM -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>4.64</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <!-- Jenkins plugin base dependencies -->
+    <dependency>
+      <groupId>org.jenkins-ci.main</groupId>
+      <artifactId>jenkins-core</artifactId>
+      <version>2.346.3</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Other required libraries -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+    <!-- Avoid duplicate -->
+    <!-- Remove if already defined elsewhere -->
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jenkins-ci.tools</groupId>
+        <artifactId>maven-hpi-plugin</artifactId>
+        <version>3.45</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
 
   <repositories>
     <repository>
@@ -27,17 +79,11 @@
     </repository>
   </repositories>
 
-  <dependencies>
-    <dependency>
-      <groupId>commons-logging</groupId>
-      <artifactId>commons-logging</artifactId>
-      <version>1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>net.jcip</groupId>
-      <artifactId>jcip-annotations</artifactId>
-      <version>1.0</version>
-    </dependency>
-  </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>jenkins-releases</id>
+      <url>https://repo.jenkins-ci.org/releases/</url>
+    </pluginRepository>
+  </pluginRepositories>
 
 </project>
