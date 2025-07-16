@@ -1,22 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         
   <modelVersion>4.0.0</modelVersion>
 
-  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>4.66</version>
+  </parent>
 
-<parent>
   <groupId>org.jenkins-ci.plugins</groupId>
-  <artifactId>plugin</artifactId>
-  <version>4.66</version>
-  <!-- Optional; remove if not using a relative parent POM -->
-  <!-- <relativePath/> -->
-</parent>
+  <artifactId>oic-auth</artifactId>
+  <version>1.9-SNAPSHOT</version>
+  <packaging>hpi</packaging>
 
-<groupId>org.jenkins-ci.plugins</groupId>
-<artifactId>oic-auth</artifactId> <!-- ✅ your actual plugin's name -->
-<version>1.9-SNAPSHOT</version>
-<packaging>hpi</packaging>
 
          
     
